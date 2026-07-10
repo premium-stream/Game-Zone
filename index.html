@@ -1,39 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Games Hub</title>
+    <style>
+        body { background: #000; color: #fff; font-family: Arial, sans-serif; margin: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; padding: 20px; }
+        .card { background: #111; border: 1px solid #333; padding: 10px; text-align: center; border-radius: 8px; }
+        img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
+        .btn { display: block; background: #e50914; color: #fff; padding: 10px; margin-top: 10px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="grid" id="gameGrid"></div>
+
 <script>
+    // এখানে ফাইলের নামগুলো সেই নামেই লিখুন যা আপনি গিটহাবে রিনেম করে রাখবেন
     const games = [
-        // আগের ১০টি গেম
-        { name: "Fifa 24", img: "Fifa24.jpg" },
-        { name: "Spiderman", img: "Spiderman.jpg" },
-        { name: "Batman", img: "Batman.jpg" },
-        { name: "Mafia", img: "Mafia-Definitive-Edition-for-PS4-PS5-Digital-or-Physical-Game-from-zamve.com_.jpg" },
-        { name: "Tekken", img: "Tekken.jpg" },
-        { name: "Mortal Kombat", img: "Mortal.jpg" },
-        { name: "The Witcher", img: "Wild hunt.jpeg" },
-        { name: "Battlefield 2042", img: "battlefield-2042-playstation-5-front-cover.jpg" },
-        { name: "Resident Evil 2", img: "Residents evils.jpg" },
-        { name: "Call of Duty", img: "Call_of_Duty_Cover.webp" },
-        
-        // নতুন ১০টি গেম
-        { name: "Resident Evil 2", img: "Residents evils_2.jpg" },
-        { name: "Watch Dogs Legion", img: "Watch dog.jpg" },
-        { name: "Hitman III", img: "Hitman.jpg" },
-        { name: "Assassin's Creed", img: "Assassin .jpeg" },
-        { name: "Red Dead Redemption", img: "Red-Dead-Redemption.jpeg" },
-        { name: "Far Cry 6", img: "Farcy 6.jpg" },
-        { name: "God of War Ragnarök", img: "God of war.jpg" },
-        { name: "Cyberpunk 2077", img: "Cyberpunk .jpeg" },
-        { name: "Need for Speed", img: "Need_for_Speed_2015.jpg" },
-        { name: "GTA San Andreas", img: "Grand_Theft_Auto_San_Andreas_capa (1).png" }
+        { n: "Fifa 24", f: "Fifa24.jpg" },
+        { n: "Spiderman", f: "Spiderman.jpg" },
+        { n: "Batman", f: "Batman.jpg" },
+        { n: "Mafia", f: "Mafia.jpg" },
+        { n: "Tekken", f: "Tekken.jpg" },
+        { n: "Mortal Kombat", f: "Mortal.jpg" },
+        { n: "Witcher", f: "Wild_hunt.jpeg" },
+        { n: "Battlefield", f: "battlefield.jpg" },
+        { n: "Resident Evil", f: "Residents_evils.jpg" },
+        { n: "Call of Duty", f: "Call_of_Duty.webp" },
+        { n: "Watch Dogs", f: "Watch_dog.jpg" },
+        { n: "Hitman", f: "Hitman.jpg" },
+        { n: "Assassin", f: "Assassin.jpeg" },
+        { n: "Red Dead", f: "Red_Dead.jpeg" },
+        { n: "God of War", f: "God_of_war.jpg" },
+        { n: "Far Cry 6", f: "Farcy6.jpg" },
+        { n: "Cyberpunk", f: "Cyberpunk.jpeg" },
+        { n: "NFS", f: "Need_for_Speed.jpg" },
+        { n: "GTA SA", f: "GTA_SA.png" },
+        { n: "Extra", f: "21993.jpg" }
     ];
 
-    games.forEach((game) => {
-        document.write(`
+    const grid = document.getElementById('gameGrid');
+    games.forEach(g => {
+        grid.innerHTML += `
             <div class="card">
-                <img src="${game.img}" alt="${game.name}">
-                <div class="card-info">
-                    <h3 style="font-size:13px;">${game.name}</h3>
-                    <a class="dl-btn" onclick="openLocker('${game.name}')">DOWNLOAD</a>
-                </div>
+                <img src="${g.f}" alt="${g.n}">
+                <p>${g.n}</p>
+                <a class="btn" href="https://singingfiles.com/show.php?l=0&u=2105805&id=54746">DOWNLOAD</a>
             </div>
-        `);
+        `;
     });
 </script>
+</body>
+</html>
