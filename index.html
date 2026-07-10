@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Games for Android | Premium Hub</title>
+    
+    <script src="https://pl30278228.effectivecpmnetwork.com/e4/30/f7/e430f75eec426fc59c37c21809532bd0.js"></script>
+    <script src="https://pl30278229.effectivecpmnetwork.com/40/e5/f5/40e5f578cb84194a579733ad0a208609.js"></script>
+
+    <style>
+        :root { --accent: #E50914; --bg: #0a0a0a; --card: #161616; --text: #ffffff; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
+        .header { padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--accent); }
+        .header h1 { color: var(--accent); margin: 0; }
+        .ad-container { margin: 20px auto; text-align: center; }
+        
+        .game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; padding: 20px; max-width: 1000px; margin: auto; }
+        .card { background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card img { width: 100%; height: 120px; object-fit: cover; }
+        .card-info { padding: 10px; text-align: center; }
+        .card-info h3 { font-size: 13px; margin: 0 0 8px 0; white-space: nowrap; overflow: hidden; }
+        .dl-btn { background: var(--accent); color: white; padding: 8px; text-decoration: none; border-radius: 4px; display: block; font-size: 12px; font-weight: bold; cursor: pointer; }
+
+        /* Popup Styles */
+        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: 0.3s; z-index: 9999; }
+        .popup-overlay.active { opacity: 1; pointer-events: auto; }
+        .popup { background: #181818; padding: 30px; border-radius: 12px; max-width: 400px; width: 90%; text-align: center; border: 1px solid var(--accent); box-shadow: 0 0 20px rgba(229, 9, 20, 0.3); }
+    </style>
+</head>
+<body>
+
+<div class="ad-container">
+    <div id="container-7ea260b67c91f40f5bfb23a8f1af30a1"></div>
+    <script async="async" data-cfasync="false" src="https://pl30278275.effectivecpmnetwork.com/7ea260b67c91f40f5bfb23a8f1af30a1/invoke.js"></script>
+</div>
+
+<div class="header">
+    <h1>PC GAMES FOR ANDROID (20+ COLLECTION)</h1>
+</div>
+
+<div class="game-grid">
+    <script>
+        const games = ["GTA San Andreas", "GTA V Remastered", "Cyberpunk 2077", "Need For Speed", "Far Cry 6", "God of War", "Assassin's Creed", "Red Dead Redemption", "Hitman 3", "Watch Dogs", "Resident Evil", "Call of Duty", "Battlefield", "The Witcher 3", "Mortal Kombat", "Tekken 7", "Mafia Definitive", "Batman Arkham", "Spider-Man", "FIFA 24"];
+        games.forEach((name, index) => {
+            document.write(`
+                <div class="card">
+                    <img src="https://via.placeholder.com/160x120?text=Game+${index+1}" alt="${name}">
+                    <div class="card-info">
+                        <h3>${name}</h3>
+                        <a class="dl-btn" onclick="openLocker('${name}')">DOWNLOAD</a>
+                    </div>
+                </div>
+            `);
+        });
+    </script>
+</div>
+
+<div class="ad-container">
+    <script> atOptions = { 'key' : '47ed5134d07e880dfc1dc8cec3627307', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} }; </script>
+    <script src="https://www.highperformanceformat.com/47ed5134d07e880dfc1dc8cec3627307/invoke.js"></script>
+</div>
+
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+        <h2 id="mediaTitle">Unlock Content</h2>
+        <p>To access high-speed downloading, server verification is required.</p>
+        <div style="border: 1px dashed #E50914; padding: 15px; border-radius: 8px; background: rgba(229, 9, 20, 0.05); margin-bottom: 20px; text-align: left;">
+            🌐 English: Complete 1 survey to unlock!<br>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 10px 0;">
+            🇧🇩 বাংলা: ফাইলটি আনলক করতে নিচের বাটনে ক্লিক করে সার্ভে সম্পন্ন করুন!
+        </div>
+        <a href="https://singingfiles.com/show.php?l=0&u=2105805&id=54746" class="dl-btn" style="padding: 15px; font-size: 16px;">Complete Verification / সার্ভে সম্পূর্ণ করুন</a>
+        <div style="margin-top: 15px; color: #777; cursor: pointer; text-decoration: underline;" onclick="closeLocker()">Cancel</div>
+    </div>
+</div>
+
+<script>
+    function openLocker(gameName) {
+        document.getElementById('mediaTitle').innerText = "Unlock " + gameName;
+        document.getElementById('popupOverlay').classList.add('active');
+    }
+    function closeLocker() { document.getElementById('popupOverlay').classList.remove('active'); }
+</script>
+
+</body>
+</html>
