@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Games Hub</title>
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; }
-        .header { text-align: center; padding: 20px; font-size: 24px; color: #e50914; }
+        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; padding: 0; }
+        .ads-banner { text-align: center; padding: 10px; background: #111; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; padding: 15px; }
-        .card { background: #111; border-radius: 5px; overflow: hidden; border: 1px solid #333; cursor: pointer; }
-        .card img { width: 100%; height: 180px; object-fit: cover; }
-        .card p { margin: 10px; font-size: 14px; text-align: center; }
-        .btn { display: block; background: #e50914; color: #fff; text-align: center; padding: 8px; margin: 0 10px 10px; border-radius: 3px; font-weight: bold; text-decoration: none; }
+        .card { background: #111; border-radius: 5px; border: 1px solid #333; cursor: pointer; text-align: center; overflow: hidden; }
+        .card img { width: 100%; height: 160px; object-fit: cover; }
+        .card p { margin: 8px 0; font-size: 13px; font-weight: bold; }
+        .btn { display: block; background: #e50914; color: #fff; padding: 8px; margin: 0 10px 10px; border-radius: 3px; font-weight: bold; text-decoration: none; }
+        
+        /* Locker Style */
         .popup-overlay { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:999; }
         .popup-overlay.active { display:flex; }
         .popup { background:#181818; padding:20px; border-radius:10px; width:80%; max-width:300px; text-align:center; border:1px solid #e50914; }
@@ -19,14 +21,17 @@
 </head>
 <body>
 
-<div class="header">PC GAMES FOR ANDROID</div>
+<div class="ads-banner">
+    <p style="color: #555;">[Header Ads Area]</p>
+</div>
+
 <div class="grid" id="gameGrid"></div>
 
 <div class="popup-overlay" id="popupOverlay">
     <div class="popup">
-        <h3 id="mediaTitle">Download Game</h3>
+        <h2 style="color:#fff;">Unlock Game</h2>
         <a href="https://singingfiles.com/show.php?l=0&u=2105805&id=54746" class="btn">DOWNLOAD NOW</a>
-        <p style="color:#777; cursor:pointer;" onclick="closeLocker()">Close</p>
+        <p style="color:#777; cursor:pointer; margin-top:10px;" onclick="closeLocker()">Close</p>
     </div>
 </div>
 
@@ -49,15 +54,15 @@
         { n: "God of War", f: "God of war.jpg" },
         { n: "Far Cry 6", f: "Farcy 6.jpg" },
         { n: "Cyberpunk", f: "Cyberpunk .jpeg" },
-        { n: "NFS", f: "Need_for_Speed_2015.jpg" },
-        { n: "GTA SA", f: "Grand_Theft_Auto_San_Andreas_capa (1).png" },
+        { n: "Need for Speed", f: "Need_for_Speed_2015.jpg" },
+        { n: "GTA San Andreas", f: "Grand_Theft_Auto_San_Andreas_capa (1).png" },
         { n: "Action Game", f: "21937.jpg" }
     ];
 
     const grid = document.getElementById('gameGrid');
     games.forEach(g => {
         grid.innerHTML += `
-            <div class="card" onclick="openLocker('${g.n}')">
+            <div class="card" onclick="openLocker()">
                 <img src="${g.f}" alt="${g.n}">
                 <p>${g.n}</p>
                 <div class="btn">DOWNLOAD</div>
@@ -65,14 +70,13 @@
         `;
     });
 
-    function openLocker(name) { 
-        document.getElementById('mediaTitle').innerText = name; 
-        document.getElementById('popupOverlay').classList.add('active'); 
-    }
-    function closeLocker() { 
-        document.getElementById('popupOverlay').classList.remove('active'); 
-    }
+    function openLocker() { document.getElementById('popupOverlay').classList.add('active'); }
+    function closeLocker() { document.getElementById('popupOverlay').classList.remove('active'); }
 </script>
+
+<div class="ads-banner">
+    <p style="color: #555;">[Footer Ads Area]</p>
+</div>
 
 </body>
 </html>
