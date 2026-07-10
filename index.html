@@ -25,32 +25,33 @@
 <div class="game-grid">
     <script>
         const games = [
-            { name: "Fifa 24", img: "Fifa24.jpg" },
-            { name: "Spiderman", img: "Spiderman.jpg" },
-            { name: "Batman", img: "Batman.jpg" },
-            { name: "Mafia", img: "Mafia-Definitive-Edition-for-PS4-PS5-Digital-or-Physical-Game-from-zarmve.com_.jpg" },
-            { name: "Tekken", img: "Tekken.jpg" },
-            { name: "Mortal Kombat", img: "Mortal.jpg" },
-            { name: "The Witcher", img: "Wild hunt.jpeg" },
-            { name: "Battlefield 2042", img: "battlefield-2042-playstation-5-front-cover.jpg" },
-            { name: "Call of Duty", img: "Call_of_Duty_Cover.webp" },
-            { name: "Resident Evil", img: "Residents evils.jpg" },
-            { name: "Watch Dogs", img: "Watch dog.jpg" },
-            { name: "Hitman", img: "Hitman.jpg" },
-            { name: "Assassin's Creed", img: "Assassin .jpeg" },
-            { name: "Red Dead Redemption", img: "Red-Dead-Redemption.jpeg" },
-            { name: "God of War", img: "God of war.jpg" },
-            { name: "Far Cry 6", img: "Farcy 6.jpg" },
-            { name: "Need for Speed", img: "Need_for_Speed_2015.jpg" },
-            { name: "Cyberpunk", img: "Cyberpunk .jpeg" },
-            { name: "GTA V", img: "Grand_Theft_Auto_V (1).png" },
-            { name: "GTA San Andreas", img: "Grand_Theft_Auto_San_Andreas_capa (1).png" }
+            { name: "Fifa 24", img: "21988.jpg" },
+            { name: "Spiderman", img: "21949.png" },
+            { name: "Batman", img: "21950.png" },
+            { name: "Mafia", img: "21951.jpg" },
+            { name: "Tekken", img: "21952.jpg" },
+            { name: "Mortal Kombat", img: "21953.jpg" },
+            { name: "The Witcher", img: "21954.jpg" },
+            { name: "Battlefield", img: "21955.jpg" },
+            { name: "Call of Duty", img: "21956.jpg" },
+            { name: "Resident Evil", img: "21957.jpg" },
+            { name: "Watch Dogs", img: "21958.jpg" },
+            { name: "Hitman", img: "21959.jpg" },
+            { name: "Assassin's Creed", img: "21960.webp" },
+            { name: "Red Dead", img: "21961.jpg" },
+            { name: "God of War", img: "21962.jpg" },
+            { name: "Far Cry 6", img: "21963.jpg" },
+            { name: "Need for Speed", img: "21964.jpg" },
+            { name: "Cyberpunk", img: "21965.jpg" },
+            { name: "GTA V", img: "21966.jpg" },
+            { name: "GTA San Andreas", img: "21967.jpg" },
+            { name: "New Game", img: "21990.jpg" }
         ];
 
         games.forEach((game) => {
             document.write(`
                 <div class="card">
-                    <img src="${game.img}" alt="${game.name}">
+                    <img src="${game.img}" alt="${game.name}" onerror="this.style.display='none'">
                     <div class="card-info">
                         <h3 style="font-size:13px;">${game.name}</h3>
                         <a class="dl-btn" onclick="openLocker('${game.name}')">DOWNLOAD</a>
