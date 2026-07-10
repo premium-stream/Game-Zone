@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Games for Android | Premium Hub</title>
-    <script src="https://pl30278228.effectivecpmnetwork.com/e4/30/f7/e430f75eec426fc59c37c21809532bd0.js"></script>
-    <script src="https://pl30278229.effectivecpmnetwork.com/40/e5/f5/40e5f578cb84194a579733ad0a208609.js"></script>
-
     <style>
         :root { --accent: #E50914; --bg: #0a0a0a; --card: #161616; --text: #ffffff; }
-        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
-        .header { padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--accent); }
-        .game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; padding: 20px; max-width: 1000px; margin: auto; }
-        .card { background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .card img { width: 100%; height: 140px; object-fit: cover; }
+        body { background: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; }
+        .header { padding: 30px 20px; text-align: center; border-bottom: 2px solid var(--accent); }
+        .game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; padding: 20px; max-width: 900px; margin: auto; }
+        .card { background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid #333; }
+        .card img { width: 100%; height: 160px; object-fit: cover; }
         .card-info { padding: 10px; text-align: center; }
-        .dl-btn { background: var(--accent); color: white; padding: 8px; text-decoration: none; border-radius: 4px; display: block; font-size: 12px; font-weight: bold; cursor: pointer; }
-        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 9999; }
+        .dl-btn { background: var(--accent); color: white; padding: 10px; text-decoration: none; border-radius: 4px; display: block; font-size: 12px; font-weight: bold; cursor: pointer; }
+        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 999; }
         .popup-overlay.active { display: flex; }
-        .popup { background: #181818; padding: 30px; border-radius: 12px; max-width: 400px; width: 90%; text-align: center; border: 1px solid var(--accent); }
+        .popup { background: #181818; padding: 20px; border-radius: 10px; width: 80%; max-width: 350px; text-align: center; border: 1px solid var(--accent); }
     </style>
 </head>
 <body>
@@ -29,27 +25,26 @@
 <div class="game-grid">
     <script>
         const games = [
-            { name: "GTA San Andreas", img: "21949.png" },
-            { name: "GTA V Remastered", img: "21950.png" },
-            { name: "Cyberpunk 2077", img: "21951.jpg" },
-            { name: "Need For Speed", img: "21952.jpg" },
-            { name: "Far Cry 6", img: "21953.jpg" },
-            { name: "God of War", img: "21954.jpg" },
-            { name: "Assassin's Creed", img: "21955.jpg" },
-            { name: "Red Dead Redemption", img: "21956.jpg" },
-            { name: "Hitman 3", img: "21957.jpg" },
-            { name: "Watch Dogs", img: "21958.jpg" },
-            { name: "Game 11", img: "21959.jpg" },
-            { name: "Game 12", img: "21960.webp" },
-            { name: "Game 13", img: "21961.jpg" },
-            { name: "Game 14", img: "21962.jpg" },
-            { name: "Game 15", img: "21963.jpg" },
-            { name: "Game 16", img: "21964.jpg" },
-            { name: "Game 17", img: "21965.jpg" },
-            { name: "Game 18", img: "21966.jpg" },
-            { name: "Game 19", img: "21967.jpg" },
-            { name: "Game 20", img: "21968.jpg" },
-            { name: "Game 21", img: "21969.jpg" }
+            { name: "Fifa 24", img: "Fifa24.jpg" },
+            { name: "Spiderman", img: "Spiderman.jpg" },
+            { name: "Batman", img: "Batman.jpg" },
+            { name: "Mafia", img: "Mafia-Definitive-Edition-for-PS4-PS5-Digital-or-Physical-Game-from-zarmve.com_.jpg" },
+            { name: "Tekken", img: "Tekken.jpg" },
+            { name: "Mortal Kombat", img: "Mortal.jpg" },
+            { name: "The Witcher", img: "Wild hunt.jpeg" },
+            { name: "Battlefield 2042", img: "battlefield-2042-playstation-5-front-cover.jpg" },
+            { name: "Call of Duty", img: "Call_of_Duty_Cover.webp" },
+            { name: "Resident Evil", img: "Residents evils.jpg" },
+            { name: "Watch Dogs", img: "Watch dog.jpg" },
+            { name: "Hitman", img: "Hitman.jpg" },
+            { name: "Assassin's Creed", img: "Assassin .jpeg" },
+            { name: "Red Dead Redemption", img: "Red-Dead-Redemption.jpeg" },
+            { name: "God of War", img: "God of war.jpg" },
+            { name: "Far Cry 6", img: "Farcy 6.jpg" },
+            { name: "Need for Speed", img: "Need_for_Speed_2015.jpg" },
+            { name: "Cyberpunk", img: "Cyberpunk .jpeg" },
+            { name: "GTA V", img: "Grand_Theft_Auto_V (1).png" },
+            { name: "GTA San Andreas", img: "Grand_Theft_Auto_San_Andreas_capa (1).png" }
         ];
 
         games.forEach((game) => {
@@ -57,7 +52,7 @@
                 <div class="card">
                     <img src="${game.img}" alt="${game.name}">
                     <div class="card-info">
-                        <h3 style="font-size:12px; margin-bottom:10px;">${game.name}</h3>
+                        <h3 style="font-size:13px;">${game.name}</h3>
                         <a class="dl-btn" onclick="openLocker('${game.name}')">DOWNLOAD</a>
                     </div>
                 </div>
@@ -68,15 +63,14 @@
 
 <div class="popup-overlay" id="popupOverlay">
     <div class="popup">
-        <h2 id="mediaTitle" style="color:#fff;">Unlock Content</h2>
-        <p style="color:#ccc;">ফাইলটি আনলক করতে নিচের বাটনে ক্লিক করে সার্ভে সম্পন্ন করুন!</p>
-        <a href="https://singingfiles.com/show.php?l=0&u=2105805&id=54746" class="dl-btn" style="padding:15px; font-size:16px;">Complete Verification</a>
-        <div style="margin-top:15px; color:#777; cursor:pointer;" onclick="closeLocker()">Cancel</div>
+        <h2 id="mediaTitle" style="color:#fff;">Unlock Game</h2>
+        <a href="https://singingfiles.com/show.php?l=0&u=2105805&id=54746" class="dl-btn">DOWNLOAD NOW</a>
+        <p style="color:#777; cursor:pointer;" onclick="closeLocker()">Close</p>
     </div>
 </div>
 
 <script>
-    function openLocker(name) { document.getElementById('mediaTitle').innerText = "Unlock " + name; document.getElementById('popupOverlay').classList.add('active'); }
+    function openLocker(name) { document.getElementById('mediaTitle').innerText = name; document.getElementById('popupOverlay').classList.add('active'); }
     function closeLocker() { document.getElementById('popupOverlay').classList.remove('active'); }
 </script>
 
